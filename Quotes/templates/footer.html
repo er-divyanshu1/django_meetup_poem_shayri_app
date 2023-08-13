@@ -1,0 +1,23 @@
+ <!-- Start: Footer -->
+ <div class="container-fluid footer">
+  <div class="row footer-credit">
+    <div class="col-md-6 col-sm-6">
+      <p>&copy; 2015, <a href="#" style="color: yellow">Divyanshu Yadav</a> | All rights reserved.</p>
+      <h4>
+        <a href="{% url 'about_us' %}" style="color: yellow" > About Us</a> &#10072&#10072 
+        <a href="{% url 'contact_us' %}" style="color: yellow"> Contect us</a> &#10072&#10072 
+        <a href="{% url 'term_condition' %}" style="color: yellow"> Term & Condition</a> 
+      </h4>
+    </div>
+    <div class="col-md-6 col-sm-6"> 
+      <ul class="footer-menu">
+        {% for x in categorys  %}
+        <li><a href="/category/{{x.url}}">{{x.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- End: Footer -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{{cat.title}}{% endblock %}
+{% block content %}
+
+<div class="container">
+  <div class="row me-row content-ct speaker">
+    <h2 class="row-title">&#9824  {{cat.title}}  &#9824</h2>
+    {% for x in posts  %}
+    <div class="col-md-4 col-sm-6 feature">
+      <p id ="mypost">&#10077 {{x.Content}} &#10078</p>
+    </div>
+{% endfor %}
+</div>   
+{% endblock  %}
+
+      
+    <!--  <ul class="speaker-social">
+        <li style="font-size:13px "><a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" target="_blank"><span class="ti-android"> Whatsapp</span></a></li>
+        <li style="font-size:13px"><a href="#"><span class="ti-location-arrow"> Telegram</span></a></li>
+        <li onclick="myFunction()" style="font-size:13px"><a href="#"><span class="ti-files"> Copy</span></a></li>
+      </ul> 
+    -->

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Meetup{% endblock %}
+{% block content %}
+
+      <div class="container">
+        <!-- Start: Speakers -->
+        <div class="row me-row content-ct speaker" id="speakers">
+          <h2 class="row-title">&#9824 Meetup All Category &#9824</h2>
+          {% for x in categorys  %}
+          <a href="/category/{{x.url}}">
+          <div class="col-md-4 col-sm-6 feature">
+            <img src="{{x.image.url}}" class="speaker-img">
+            <h3><b>{{x.title}}</b></h3>
+          </div>
+          <a>
+      {% endfor %}
+        </div>   
+{% endblock  %}
+ 
+           <!--  <p>{{x.decription}}</p>
+            <ul class="speaker-social">
+              <li><a href="#"><span class="ti-facebook"></span></a></li>
+              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+              <li><a href="#"><span class="ti-linkedin"></span></a></li>
+            </ul>  -->
